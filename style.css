@@ -547,14 +547,10 @@ p {
     font-size: 0.95rem;
 }
 
-/* ============================================
-   Chocolate Detail Modal
-   ============================================ */
-
 .choco-modal {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0,0,0,0.55);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -595,11 +591,10 @@ p {
     font-size: 2rem;
     color: var(--cocoa-brown);
     cursor: pointer;
-    line-height: 1;
     z-index: 2;
 }
 
-/* Modal Layout */
+/* Layout */
 
 .choco-modal-body {
     display: grid;
@@ -607,7 +602,7 @@ p {
     height: 100%;
 }
 
-/* Image Section */
+/* Image */
 
 .choco-modal-image-wrapper {
     width: 100%;
@@ -622,7 +617,7 @@ p {
     display: block;
 }
 
-/* Text Section */
+/* Info */
 
 .choco-modal-info {
     padding: 2.5rem;
@@ -643,7 +638,7 @@ p {
     margin-bottom: 1.25rem;
 }
 
-/* WhatsApp Section */
+/* WhatsApp section */
 
 .choco-modal-whatsapp {
     margin-top: 1rem;
@@ -663,8 +658,6 @@ p {
     margin-bottom: 1rem;
 }
 
-/* WhatsApp Button */
-
 .whatsapp-button {
     display: inline-flex;
     align-items: center;
@@ -678,7 +671,7 @@ p {
     font-family: 'Poppins', sans-serif;
     background-color: #25D366;
     color: #fff;
-    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 6px 18px rgba(37,211,102,0.4);
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -686,7 +679,39 @@ p {
 .whatsapp-button:hover {
     background-color: #1ebe5a;
     transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(37, 211, 102, 0.55);
+    box-shadow: 0 8px 22px rgba(37,211,102,0.55);
+}
+@media (max-width: 768px) {
+
+    .choco-modal-content {
+        width: 95%;
+        height: auto;
+        max-height: 90vh;
+    }
+
+    .choco-modal-body {
+        grid-template-columns: 1fr;
+    }
+
+    .choco-modal-image-wrapper {
+        height: 320px;
+    }
+
+    .choco-modal-info {
+        padding: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .choco-modal-image-wrapper {
+        height: 260px;
+    }
+
+    .choco-modal-info {
+        padding: 1.5rem;
+    }
+
 }
 
 /* ============================================

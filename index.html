@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome for social icons -->
+    <!-- Font Awesome for social & WhatsApp icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
@@ -214,6 +214,48 @@
             <p>&copy; 2026 Bumonii'S Chocolate. All rights reserved. Made with ❤️ and lots of chocolate.</p>
         </div>
     </footer>
+
+    <!-- Chocolate Detail Modal -->
+    <div class="choco-modal" id="chocolateModal" aria-hidden="true">
+        <div class="choco-modal-content">
+            <button class="choco-modal-close" id="chocoModalClose" aria-label="Close chocolate details">
+                &times;
+            </button>
+            <div class="choco-modal-body">
+                <div class="choco-modal-image-wrapper">
+                    <img id="chocoModalImage" src="" alt="">
+                </div>
+                <div class="choco-modal-info">
+                    <h3 id="chocoModalTitle"></h3>
+                    <p id="chocoModalDescription"></p>
+
+                    <div class="choco-modal-whatsapp">
+                        <h4>WhatsApp Query</h4>
+                        <p>
+                            Have a question about
+                            <span id="chocoModalProductName"></span>?
+                            Chat with us directly on WhatsApp.
+                        </p>
+                        <a href="#" target="_blank" rel="noopener"
+                           id="chocoModalWhatsappBtn"
+                           class="whatsapp-button">
+                            <i class="fab fa-whatsapp"></i>
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Chat Button -->
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Bumonii%27S%20Chocolates%2C%20I%27d%20like%20to%20know%20more%20about%20your%20chocolates."
+       class="whatsapp-floating"
+       target="_blank"
+       rel="noopener"
+       aria-label="Chat with Bumonii'S Chocolates on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- JavaScript -->
     <script src="script.js"></script>

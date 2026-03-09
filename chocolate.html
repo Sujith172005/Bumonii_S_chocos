@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chocolate Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8f0;
+      text-align: center;
+      padding: 40px;
+    }
+    img {
+      max-width: 350px;
+      border-radius: 18px;
+      margin-top: 20px;
+    }
+    p {
+      max-width: 600px;
+      margin: 15px auto;
+      font-size: 16px;
+    }
+    a {
+      display: inline-block;
+      margin-top: 25px;
+      color: #6B4423;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="name"></h1>
+  <img id="image">
+  <p id="desc"></p>
+
+  <a href="index.html">← Back to Chocolates</a>
+
+  <script>
+    const data = {
+      bars: {
+        name: "Chocolate Bars",
+        img: "./choco images/bar.jpg",
+        desc: "Rich, smooth chocolate bars crafted with the finest cocoa beans."
+      },
+      truffles: {
+        name: "Chocolate Truffles",
+        img: "./choco images/truffles.jpg",
+        desc: "Luxurious ganache-filled truffles for special moments."
+      },
+      barks: {
+        name: "Chocolate Barks",
+        img: "./choco images/barks.jpg",
+        desc: "Crunchy chocolate bark with nuts and dried fruits."
+      },
+      bits: {
+        name: "Chocolate Bits",
+        img: "./choco images/bits.jpg",
+        desc: "Bite-sized chocolate pieces perfect for snacking."
+      },
+      enrobed: {
+        name: "Enrobed Chocolates",
+        img: "./choco images/enrobed.jpg",
+        desc: "Hand-dipped chocolates with smooth glossy coatings."
+      },
+      bonbons: {
+        name: "Bonbons",
+        img: "./choco images/bonsnew.jpg",
+        desc: "Elegant filled chocolates with beautiful designs."
+      },
+      molded: {
+        name: "Molded Chocolates",
+        img: "./choco images/molded.jpg",
+        desc: "Artistically shaped chocolates for gifting."
+      },
+      macaroons: {
+        name: "Macaroons",
+        img: "./choco images/macrons.jpg",
+        desc: "Delicate French macarons with chocolate ganache."
+      }
+    };
+
+    const id = new URLSearchParams(window.location.search).get("id");
+    const choco = data[id];
+
+    document.getElementById("name").innerText = choco.name;
+    document.getElementById("image").src = choco.img;
+    document.getElementById("desc").innerText = choco.desc;
+  </script>
+
+</body>
+</html>
